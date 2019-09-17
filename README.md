@@ -245,11 +245,50 @@ modifyArray(arr, function() {
  
 
 ## White Board
-String manipulation- reverse,
-Palindromes
-Fibonacci sequence
-Fizzbuzz
+**Check palindromes**
+```javascript
+  // Example string
+const string1 = 'level';
+const string2 = 'house';
 
+const isPalindrome = (string) => 
+  string == string.split('').reverse().join('');
+
+// Test
+isPalindrome(string1); // true
+isPalindrome(string2); // false
+```
+**Fibonacci sequence**
+```javascript
+// Recursive Solution : F(n) = F(n-1) + F(n-2)
+function fibonacci(num) {
+  if (num <= 1) return 1;
+
+  return fibonacci(num - 1) + fibonacci(num - 2);
+}
+```
+
+**Fizzbuzz**
+```javascript
+function fizzBuzz() {  
+  for (var i = 1; i <= 100; i++) {
+    if ( i % 3 == 0 && i % 5 == 0 ) {
+      console.log(‘FizzBuzz’);
+    }
+    else if ( i % 3 == 0 ) {
+      console.log(‘Fizz’);
+    }
+    else if ( i % 5 == 0 ) {
+      console.log(‘Buzz’);
+    }
+    else {
+      console.log(i);
+    }
+  }
+}
+
+fizzBuzz();
+```
 
 **Q. How do you create a private variable in Javascript?**
 ```javascript
