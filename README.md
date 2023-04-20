@@ -123,10 +123,11 @@ Preprocessors extend the CSS functional by adding variables, mixins, partials, a
 
 
 ## Scoping: difference var / const / let 
- - *var* has global scope and functional scope depending on where it is. var is hoisted.
+ - *var* - global/functional scope, initialized as "undefined" 
+ 
+- *let* - block scope, can be updated, not re-declared. can be declared without being initialized
 
-- *let & const* were introduced in ES6, They have block scoping inside of the curly brackets. They aren’t hoisted<br>
-- *const* - define constant. many people think const is immutable, but it can be 
+- *const* - define constant. block scope, can't be updated and re-declared. must be initialized during declation.
 
 ## Arrow functions
  It provides a more concise syntax for writing function expressions by removing the "function" and "return" keywords.
@@ -209,7 +210,6 @@ Javascripts executes the next code first without waiting for the execution of a 
 
 
 ### Why we use promise?
- Promise 를 통해 어떻게 비동기 작업들을 쉽게 관리할 수 있는지를 본격적으로 알아보겠습니다.
 - To process the data received from the server
 - To request, receive data and then process it (from the server through fetch, etc)
 
